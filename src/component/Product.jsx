@@ -4,6 +4,7 @@ import { addCart } from "../redux/action";
 import { NavLink, useParams } from "react-router-dom";
 import Loading from "./Loading";
 import Alert from "./Alert";
+import ProductFeatured from "./ProductFeatured";
 
 const Product = () => {
   const { id } = useParams();
@@ -64,6 +65,7 @@ const Product = () => {
       <div className="container py-5">
         <div className="row">{loading ? <Loading /> : <ShowProduct />}</div>
       </div>
+      <ProductFeatured />
     </div>
   );
 };

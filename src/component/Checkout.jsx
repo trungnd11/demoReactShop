@@ -48,9 +48,9 @@ const Checkout = () => {
   };
 
   return (
-    <div className="container">
-      <div className="py-5 text-center">
-        <h2>Checkout form</h2>
+    <div className="container bg-light shadow">
+      <div className="py-5 text-center mt-3">
+        <h2 className="text-uppercase">Checkout form</h2>
       </div>
 
       <div className="row g-5">
@@ -356,27 +356,12 @@ const Checkout = () => {
 
             <hr className="my-4" />
 
-            <button className="w-100 btn btn-primary btn-lg" type="submit">
+            <button className="w-100 btn btn-primary btn-lg mb-3" type="submit">
               Continue to checkout
             </button>
           </form>
         </div>
       </div>
-
-      <footer className="my-5 pt-5 text-muted text-center text-small">
-        <p className="mb-1">© 2017–2021 Company Name</p>
-        <ul className="list-inline">
-          <li className="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Support</a>
-          </li>
-        </ul>
-      </footer>
     </div>
   );
 };

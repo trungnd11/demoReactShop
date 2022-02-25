@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { deleteCart, minusProuduct, plusProduct } from "../redux/action/index";
+import ProductFeatured from "./ProductFeatured";
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
@@ -95,6 +96,7 @@ const Cart = () => {
       {state.length === 0 && showCartEmpty()}
       {state.length !== 0 && state.map(cartProducts)}
       {state.length !== 0 && button()}
+      <ProductFeatured />
     </>
   );
 };
