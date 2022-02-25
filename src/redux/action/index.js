@@ -13,3 +13,19 @@ export const deleteCart = (product) => {
     payload: product,
   };
 };
+
+// For Minus Item From Cart
+export const minusProuduct = (product) => {
+  return {
+    type: "MINUS_PRODUCT",
+    payload: product,
+  };
+};
+
+// For Plus Item From Cart
+export const plusProduct = (product) => {
+  return {
+    type: "PLUS_PRODUCT",
+    payload: product,
+  };
+};

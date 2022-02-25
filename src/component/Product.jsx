@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/action";
 import { NavLink, useParams } from "react-router-dom";
+import Loading from "./Loading";
+import Alert from "./Alert";
 
 const Product = () => {
   const { id } = useParams();
@@ -11,7 +13,8 @@ const Product = () => {
   const dispatch = useDispatch();
   const addProduct = (product) => {
     dispatch(addCart(product));
-  }
+    Alert("success", "Đã thêm vào giỏ hàng");
+  };
 
   useEffect(() => {
     const getProductById = async () => {
@@ -23,12 +26,7 @@ const Product = () => {
     getProductById();
   }, []);
 
-  const Loading = () => {
-    return <div className="text-center pt-5 mt-5">Loading...</div>;
-  };
-
   const ShowProduct = () => {
-    
     return (
       <>
         <div className="col-md-6 mt-5">
@@ -47,7 +45,12 @@ const Product = () => {
           </p>
           <h3 className="display-6 fw-bold my-4">$ {product.price}</h3>
           <p className="lead">{product.description}</p>
-          <button className="btn btn-outline-dark me-2" onClick={() => addProduct(product)}>Add to Cart</button>
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => addProduct(product)}
+          >
+            Add to Cart
+          </button>
           <NavLink to="/cart" className="btn btn-outline-danger">
             Go to Cart
           </NavLink>
