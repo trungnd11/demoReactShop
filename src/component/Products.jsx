@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Loading from "./Loading";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -24,10 +25,6 @@ const Products = () => {
     };
     getProduct();
   }, []);
-
-  const Loading = () => {
-    return <div className="text-center">Loading...</div>;
-  };
 
   const filterProduct = (categoryFilter) => {
     const updateList = data.filter(

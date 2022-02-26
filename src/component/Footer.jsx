@@ -23,16 +23,16 @@ const Footer = () => {
 
                         <ul className="list-unstyled mb-0">
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 1</a>
+                                <a href="#!" className="text-black text-decoration-none">Home</a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 2</a>
+                                <a href="#!" className="text-black text-decoration-none">Shop</a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 3</a>
+                                <a href="#!" className="text-black text-decoration-none">About</a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 4</a>
+                                <a href="#!" className="text-black text-decoration-none">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -42,16 +42,16 @@ const Footer = () => {
 
                         <ul className="list-unstyled">
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 1</a>
+                                <a href="#!" className="text-black text-decoration-none">Men's </a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 2</a>
+                                <a href="#!" className="text-black text-decoration-none">Women's </a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 3</a>
+                                <a href="#!" className="text-black text-decoration-none">Jewelery </a>
                             </li>
                             <li>
-                                <a href="#!" className="text-black text-decoration-none">Link 4</a>
+                                <a href="#!" className="text-black text-decoration-none">Electronic </a>
                             </li>
                         </ul>
                     </div>

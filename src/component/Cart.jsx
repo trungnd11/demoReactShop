@@ -36,7 +36,7 @@ const Cart = () => {
           <div className="col-md-9">
             <h3>{item.title}</h3>
             <p className="lead fw-bold">${item.price}</p>
-            <div className="input-group" style={{ width: "14%" }}>
+            <div className="input-group" style={{ width: "15%" }}>
               <span className="input-group-btn">
                 <button
                   type="button"
