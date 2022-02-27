@@ -10,6 +10,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const handleClose = (item) => {
+
     dispatch(deleteCart(item));
   };
 
@@ -21,9 +22,14 @@ const Cart = () => {
     dispatch(plusProduct(item));
   };
 
+  const inputChangedHandler = (event) => {
+    const updatedKeyword = event.target.value;
+    // May be call for search result
+  };
+
   const cartProducts = (item) => {
     return (
-      <div className="container bg-light py-4 my-5" key={item.id}>
+      <div className="container rounded border py-4 my-5" key={item.id}>
         <button
           className="btn-close float-end"
           aria-label="Close"
@@ -35,28 +41,29 @@ const Cart = () => {
           </div>
           <div className="col-md-9">
             <h3>{item.title}</h3>
-            <p className="lead fw-bold">${item.price}</p>
-            <div className="input-group" style={{ width: "15%" }}>
+            <p className="lead fw-bold">${item.price * item.qty}</p>
+            <div className="input-group" style={{ width: "10%" }}>
               <span className="input-group-btn">
                 <button
                   type="button"
-                  className="btn btn-outline-danger btn-number"
+                  className="btn-outline-danger btn-number"
                   data-type="minus"
                   data-field="quant[2]"
+                  style={{height: "30px", border: "1px solid"}}
                   onClick={() => handleMius(item)}
                 >
                   <i className="fa fa-minus" aria-hidden="true"></i>
                 </button>
               </span>
-              <div className="px-3 pt-2 pb-1 border border-dark">
-                {item.qty}
-              </div>
+              <input className="form-control" style={{border: "1px solid", textAlign: "center", height: "30px"}} type="text" value={item.qty} 
+              onChange={(event)=>this.inputChangedHandler(event)} />
               <span className="input-group-btn">
                 <button
                   type="button"
-                  className="btn btn-outline-success btn-number"
+                  className="btn-outline-success btn-number"
                   data-type="plus"
                   data-field="quant[2]"
+                  style={{height: "30px", border: "1px solid"}}
                   onClick={() => handlePlus(item)}
                 >
                   <i className="fa fa-plus" aria-hidden="true"></i>
