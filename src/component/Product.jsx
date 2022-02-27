@@ -23,6 +23,10 @@ const Product = () => {
       const response = await fetch(`http://fakestoreapi.com/products/${id}`);
       setProduct(await response.clone().json());
       setLoading(false);
+
+      return () => {
+        
+      };
     };
     getProductById();
   }, []);

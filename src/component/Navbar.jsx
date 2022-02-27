@@ -12,7 +12,7 @@ const NavbarT = () => {
       } : { color: '#545e6f' }
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="shadow">
       <Container>
         <Navbar.Brand to="/" className="fw-bold fs-4">
           <NavLink className="nav-link" aria-current="page" to="/">

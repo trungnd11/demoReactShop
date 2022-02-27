@@ -8,7 +8,7 @@
   text-align: center;
   transition: all 0.7s ease 0s;
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .product-grid:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 10px 10px rgba(0, 0, 0, 0.05);

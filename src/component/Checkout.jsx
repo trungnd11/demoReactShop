@@ -9,6 +9,7 @@ const Checkout = () => {
   useEffect(() => {
     let total = state.reduce((total, item) => total + item.price * item.qty, 0);
     SetTotalPayment(total);
+    
   }, [state]);
 
   const ProductItem = () => {

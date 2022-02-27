@@ -8,6 +8,8 @@ import Product from "./component/Product";
 import Cart from "./component/Cart";
 import Checkout from "./component/Checkout";
 import Footer from "./component/Footer";
+import About from "./component/About";
+import Contact from "./component/Contact";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/products/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
