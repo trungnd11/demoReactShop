@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { NavLink } from "react-router-dom";
 
 const ProductFeatured = () => {
   const [productFeatured, setProductFeatured] = useState([]);
@@ -25,6 +26,10 @@ const ProductFeatured = () => {
     getProductNew();
   }, []);
 
+  const handleCLickCardProduct = () => {
+
+  }
+
   const responsive = {
     0: { items: 1 },
     1200: { items: 4 },
@@ -35,10 +40,10 @@ const ProductFeatured = () => {
       <div className="p-2 pb-3">
         <div className="col-12 product-grid">
           <div className="product-image">
-            <a href="#" className="image">
+            <NavLink to={`/products/${item.id}`} className="image">
               <img className="pic-1" src={item.image} />
               <img className="pic-2" src={item.image} />
-            </a>
+            </NavLink>
             <span className="product-hot-label">Hot</span>
             <ul className="product-links">
               <li>
@@ -60,9 +65,9 @@ const ProductFeatured = () => {
           </div>
           <hr className="m-0" />
           <div className="product-content">
-            <a className="add-to-cart" href="#">
+            <NavLink className="add-to-cart" to={`/products/${item.id}`}>
               <i className="fa fa-plus me-2"></i>Add to cart
-            </a>
+            </NavLink>
             <h3 className="title">
               <a href="#">{item.title.substring(0, 20)}...</a>
             </h3>

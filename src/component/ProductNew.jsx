@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { NavLink } from "react-router-dom";
 
 const ProductNew = () => {
   const [productNew, setProductNew] = useState([]);
@@ -31,10 +32,10 @@ const ProductNew = () => {
             <div className="col-sm-6 col-md-4 col-lg-3 mt-4" key={item.id}>
               <div className="product-grid h-100">
                 <div className="product-image">
-                  <a href="#" className="image">
+                  <NavLink to={`/products/${item.id}`} className="image">
                     <img className="pic-1" src={item.image} />
                     <img className="pic-2" src={item.image} />
-                  </a>
+                  </NavLink>
                   <span className="product-hot-label">New</span>
                   <ul className="product-links">
                     <li>

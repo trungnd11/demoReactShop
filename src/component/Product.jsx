@@ -29,7 +29,7 @@ const Product = () => {
       };
     };
     getProductById();
-  }, []);
+  }, [product]);
 
   const ShowProduct = () => {
     return (
